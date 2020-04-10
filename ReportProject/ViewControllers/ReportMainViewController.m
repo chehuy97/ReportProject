@@ -65,6 +65,9 @@
         [self showTreeViewOfReports];
     }
 }
+- (IBAction)settingAction:(UIButton *)sender {
+    [self showAlert:@"You clicked Setting Button"];
+}
 
 
 

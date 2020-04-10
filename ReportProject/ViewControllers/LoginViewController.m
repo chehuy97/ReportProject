@@ -93,10 +93,10 @@
     _passwordTextfield.translatesAutoresizingMaskIntoConstraints = false;
     
     [self.view addSubview: _btnLogin];
-    //[_btnLogin setImage:[UIImage imageNamed:@"login-button"] forState:UIControlStateNormal];
-    [_btnLogin setTitle: @"Login" forState: normal];
+    //[_btnLogin setImage:[UIImage imageNamed:@"login-button1"] forState:UIControlStateNormal];
+    [_btnLogin setTitle: @"LOGIN" forState: normal];
     [_btnLogin setTitleColor:[UIColor whiteColor] forState:normal];
-    _btnLogin.titleLabel.font = [UIFont boldSystemFontOfSize:25];
+    _btnLogin.titleLabel.font = [UIFont boldSystemFontOfSize:30];
     _btnLogin.layer.cornerRadius = 15;
     _btnLogin.backgroundColor = [UIColor blackColor];
     [_btnLogin.widthAnchor constraintEqualToConstant:self.view.frame.size.width/4*3].active = true;
@@ -108,9 +108,9 @@
     UIButton *btnSignin = [[UIButton alloc] initWithFrame:CGRectZero];
     [btnSignin addTarget:self action:@selector(showSigninAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: btnSignin];
-    [btnSignin setTitle: @"Signin" forState: normal];
+    [btnSignin setTitle: @"SIGNIN" forState: normal];
     [btnSignin setTitleColor:[UIColor whiteColor] forState:normal];
-    btnSignin.titleLabel.font = [UIFont boldSystemFontOfSize:25];
+    btnSignin.titleLabel.font = [UIFont boldSystemFontOfSize:30];
     btnSignin.layer.cornerRadius = 15;
     btnSignin.backgroundColor = [UIColor blackColor];
     [btnSignin.widthAnchor constraintEqualToConstant:self.view.frame.size.width/4*3].active = true;

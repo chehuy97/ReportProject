@@ -70,12 +70,12 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV0-cN-qIi">
-                                <rect key="frame" x="334" y="54" width="50" height="30"/>
+                                <rect key="frame" x="344" y="54" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3YP-Hz-7RA"/>
-                                    <constraint firstAttribute="width" constant="50" id="U56-5U-Dwc"/>
+                                    <constraint firstAttribute="width" constant="40" id="U56-5U-Dwc"/>
                                 </constraints>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" backgroundImage="logout"/>
                                 <connections>
                                     <action selector="LogoutAction:" destination="4Tp-P6-eeK" eventType="touchUpInside" id="lke-Ru-H2v"/>
                                 </connections>
@@ -89,21 +89,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZ0-Ra-AFh">
+                                <rect key="frame" x="274" y="54" width="40" height="30"/>
+                                <state key="normal" backgroundImage="settings"/>
+                                <connections>
+                                    <action selector="settingAction:" destination="4Tp-P6-eeK" eventType="touchUpInside" id="Sni-8y-Mx9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IXW-kp-TJD" firstAttribute="leading" secondItem="lxo-gt-450" secondAttribute="leading" constant="20" id="0UW-3E-ed3"/>
                             <constraint firstItem="lxo-gt-450" firstAttribute="trailing" secondItem="MV0-cN-qIi" secondAttribute="trailing" constant="30" id="1Wf-cb-GgE"/>
                             <constraint firstItem="IXW-kp-TJD" firstAttribute="top" secondItem="4FS-P7-y73" secondAttribute="bottom" constant="15" id="7JG-EI-e7L"/>
+                            <constraint firstItem="xZ0-Ra-AFh" firstAttribute="height" secondItem="MV0-cN-qIi" secondAttribute="height" id="9m7-oU-9Kj"/>
                             <constraint firstItem="4FS-P7-y73" firstAttribute="top" secondItem="MV0-cN-qIi" secondAttribute="bottom" constant="20" id="Ias-O5-UkV"/>
                             <constraint firstAttribute="bottom" secondItem="iEh-8q-gLf" secondAttribute="bottom" id="Ja5-08-636"/>
                             <constraint firstItem="iEh-8q-gLf" firstAttribute="top" secondItem="4FS-P7-y73" secondAttribute="bottom" constant="60" id="JtE-61-wJX"/>
                             <constraint firstItem="4FS-P7-y73" firstAttribute="leading" secondItem="lxo-gt-450" secondAttribute="leading" constant="35" id="Xc7-1o-4oi"/>
+                            <constraint firstItem="MV0-cN-qIi" firstAttribute="leading" secondItem="xZ0-Ra-AFh" secondAttribute="trailing" constant="30" id="brh-yy-iEp"/>
                             <constraint firstItem="lxo-gt-450" firstAttribute="trailing" secondItem="4FS-P7-y73" secondAttribute="trailing" constant="35" id="cSx-Eg-4O4"/>
                             <constraint firstItem="iEh-8q-gLf" firstAttribute="leading" secondItem="lxo-gt-450" secondAttribute="leading" id="eGZ-qJ-lMB"/>
                             <constraint firstItem="MV0-cN-qIi" firstAttribute="top" secondItem="lxo-gt-450" secondAttribute="top" constant="10" id="mef-p0-fXX"/>
+                            <constraint firstItem="xZ0-Ra-AFh" firstAttribute="top" secondItem="MV0-cN-qIi" secondAttribute="top" id="pDZ-sV-kyW"/>
                             <constraint firstItem="iEh-8q-gLf" firstAttribute="trailing" secondItem="lxo-gt-450" secondAttribute="trailing" id="tsP-Zu-xSa"/>
                             <constraint firstItem="4FS-P7-y73" firstAttribute="centerX" secondItem="532-bY-TOE" secondAttribute="centerX" id="vcV-YA-M0b"/>
+                            <constraint firstItem="xZ0-Ra-AFh" firstAttribute="width" secondItem="MV0-cN-qIi" secondAttribute="width" id="wAD-Yw-X64"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lxo-gt-450"/>
                     </view>
@@ -190,15 +201,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDg-4z-TYo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDg-4z-TYo">
                                 <rect key="frame" x="57" y="612" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.94384707020000003" green="1" blue="0.2969185345" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="7yJ-RK-5sQ"/>
                                     <constraint firstAttribute="height" constant="50" id="gM4-3d-Kup"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="\"/>
                                 <connections>
                                     <action selector="LoginMainView:" destination="rgv-sD-AeU" eventType="touchUpInside" id="XYT-bi-jdq"/>
                                 </connections>
@@ -382,5 +392,7 @@
     <resources>
         <image name="grid-icon" width="18" height="18"/>
         <image name="list-icon" width="18" height="18"/>
+        <image name="logout" width="24" height="24"/>
+        <image name="settings" width="24" height="24"/>
     </resources>
 </document>

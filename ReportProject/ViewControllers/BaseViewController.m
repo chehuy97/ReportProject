@@ -15,7 +15,6 @@
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:content preferredStyle: UIAlertControllerStyleAlert];
     UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
-        NSLog(@"Ok is pressed");
     }];
     [alert addAction:actionOK];
     [self presentViewController:alert animated:YES completion:nil];
