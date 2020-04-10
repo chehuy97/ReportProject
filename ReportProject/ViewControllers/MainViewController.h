@@ -18,6 +18,15 @@
 -(void) showLoginView;
 
 -(void) showSettingServiceView;
+/**
+ show warning notification box
+ **/
+-(void) showWarningMessageBoxWithMassage:(NSString *) message;
+/**
+ hide notification box
+ **/
+-(void)hideMessageBox;
+
 
 
 @end

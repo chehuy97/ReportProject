@@ -1,0 +1,21 @@
+//
+//  PrefixHEader.pch
+//  ReportProject
+//
+//  Created by Arthur on 4/10/20.
+//  Copyright © 2020 Arthur. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#endif
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+
+#define currentLanguageBundle [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[[NSLocale preferredLanguages] objectAtIndex:0] ofType:@"lproj"]]
+#define currentLanguageBundle [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[[NSLocale preferredLanguages] objectAtIndex:0] ofType:@"lproj"]]
+
+#import "MarcoDefinition.h"

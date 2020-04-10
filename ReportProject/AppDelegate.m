@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,6 +15,17 @@
 
 @implementation AppDelegate
 
+
++ (AppDelegate *)shareInstance
+{
+    static dispatch_once_t once;
+    static AppDelegate *shareInstance;
+    
+    dispatch_once(&once, ^{
+        shareInstance = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    });
+    return shareInstance;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -47,5 +59,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)showWarningNotificationWithMessage:(NSString *)message
+{
+    [self.mainViewController showWarningMessageBoxWithMassage:message];
+}
 
+-(void)hideNotification
+{
+    [self.mainViewController hideMessageBox];
+}
 @end

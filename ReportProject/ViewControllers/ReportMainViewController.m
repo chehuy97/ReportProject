@@ -44,6 +44,7 @@
 {
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor colorWithRed:175/255.0f green:196/255.0f blue:224/255.0f alpha:1];
+    [[AppDelegate shareInstance] hideNotification];
 }
 
 - (void) showGridViewOfReports
@@ -66,7 +67,8 @@
     }
 }
 - (IBAction)settingAction:(UIButton *)sender {
-    [self showAlert:@"You clicked Setting Button"];
+    //[self showAlert:@"You clicked Setting Button"];
+    [[AppDelegate shareInstance] showWarningNotificationWithMessage:@"I want to test Notification"];
 }
 
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LoginViewController.h"
+#import "AppDelegate.h"
 #import "User.h"
 
 @interface LoginViewController ()
@@ -40,6 +41,7 @@
 
 -(void)customizeUI
 {
+    [[AppDelegate shareInstance] hideNotification];
     UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:self.view.frame];
     backgroundImage.image = [UIImage imageNamed:@"gray-background"];
     [self.view addSubview:backgroundImage];
@@ -121,7 +123,7 @@
 }
 -(void)showSigninAction
 {
-    [self showAlert:@"It caught the action"];
+    [[AppDelegate shareInstance] showWarningNotificationWithMessage:@"you can't signin ÓC CHÓ"];
 }
 
 -(void)validateLogin

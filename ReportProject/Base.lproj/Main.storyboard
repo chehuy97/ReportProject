@@ -24,10 +24,56 @@
                                     <segue destination="rmj-eh-zGc" kind="embed" identifier="mainEmbededSegue" id="ejJ-iT-Gnc"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjI-gg-CvM">
+                                <rect key="frame" x="144" y="88" width="250" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7AH-zR-lT5">
+                                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="6eQ-sX-olN"/>
+                                            <constraint firstAttribute="width" constant="60" id="C2x-Ce-v9S"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notification message here" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opj-TZ-BCx">
+                                        <rect key="frame" x="90" y="10" width="130" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="a6H-wl-CD2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="601-0q-DVJ">
+                                        <rect key="frame" x="231" y="7" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="Rzc-zK-G3u"/>
+                                            <constraint firstAttribute="height" constant="12" id="zAb-bB-2qh"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="close"/>
+                                        <connections>
+                                            <action selector="closeNotificationBoxButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7p-Ln-PMb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.13578132060000001" blue="0.0068581785550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7AH-zR-lT5" firstAttribute="centerY" secondItem="cjI-gg-CvM" secondAttribute="centerY" id="1ZO-Z2-4W3"/>
+                                    <constraint firstItem="601-0q-DVJ" firstAttribute="top" secondItem="cjI-gg-CvM" secondAttribute="top" constant="7" id="32j-aS-oiV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Opj-TZ-BCx" secondAttribute="trailing" constant="30" id="Af6-cq-FIq"/>
+                                    <constraint firstItem="7AH-zR-lT5" firstAttribute="leading" secondItem="cjI-gg-CvM" secondAttribute="leading" constant="10" id="RmM-cd-Fj7"/>
+                                    <constraint firstItem="Opj-TZ-BCx" firstAttribute="centerY" secondItem="cjI-gg-CvM" secondAttribute="centerY" id="VOW-lV-2Ip"/>
+                                    <constraint firstItem="Opj-TZ-BCx" firstAttribute="leading" secondItem="7AH-zR-lT5" secondAttribute="trailing" constant="20" id="aqU-ZK-ey2"/>
+                                    <constraint firstAttribute="trailing" secondItem="601-0q-DVJ" secondAttribute="trailing" constant="7" id="fpI-QX-DkE"/>
+                                    <constraint firstAttribute="width" constant="250" id="jS6-Ze-1Ev"/>
+                                    <constraint firstAttribute="height" constant="80" id="uLt-1F-AoD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cjI-gg-CvM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7uP-Mi-EvC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tKv-tX-sDw" secondAttribute="trailing" id="Ltz-y5-b0L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cjI-gg-CvM" secondAttribute="trailing" constant="20" id="MUJ-iU-GoG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tKv-tX-sDw" secondAttribute="bottom" id="X1P-Hf-pll"/>
                             <constraint firstItem="tKv-tX-sDw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qN4-eN-fkB"/>
                             <constraint firstItem="tKv-tX-sDw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="upI-Sn-9SW"/>
@@ -35,6 +81,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SHz-cj-pjD"/>
+                    <connections>
+                        <outlet property="notificationBox" destination="cjI-gg-CvM" id="enq-hO-mKV"/>
+                        <outlet property="notificationIconView" destination="7AH-zR-lT5" id="xXD-OY-OXq"/>
+                        <outlet property="notificationMessageLabel" destination="Opj-TZ-BCx" id="LIN-Qx-pxs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,6 +441,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="12" height="12"/>
         <image name="grid-icon" width="18" height="18"/>
         <image name="list-icon" width="18" height="18"/>
         <image name="logout" width="24" height="24"/>

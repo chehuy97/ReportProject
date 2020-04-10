@@ -32,6 +32,8 @@
 		8E17FC6D2434747B0014F0EA /* ReportMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportMainViewController.m; sourceTree = "<group>"; };
 		8E17FC702434804C0014F0EA /* MainReportContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainReportContainerViewController.h; sourceTree = "<group>"; };
 		8E17FC712434806A0014F0EA /* MainReportContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainReportContainerViewController.m; sourceTree = "<group>"; };
+		8E2A979A244060F100E3EA06 /* MacroDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinitions.h; sourceTree = "<group>"; };
+		8E2A979D24406CDC00E3EA06 /* PrefixHEader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHEader.pch; sourceTree = "<group>"; };
 		8E2D0D97243B044600ECA9A9 /* MainReportTreeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainReportTreeListViewController.h; sourceTree = "<group>"; };
 		8E2D0D98243B049B00ECA9A9 /* MainReportTreeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainReportTreeListViewController.m; sourceTree = "<group>"; };
 		8E2D0D9C243B170B00ECA9A9 /* FolderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolderViewCell.h; sourceTree = "<group>"; };
@@ -88,6 +90,38 @@
 			path = MainReports;
 			sourceTree = "<group>";
 		};
+		8E2A979724405FE900E3EA06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E2FB11C2431A61D0094C04B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E2A97982440608800E3EA06 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A97992440609200E3EA06 /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8E2A97992440609200E3EA06 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A979A244060F100E3EA06 /* MacroDefinitions.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8E2A979B24406B4F00E3EA06 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A979D24406CDC00E3EA06 /* PrefixHEader.pch */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		8E2D0D9A243B158B00ECA9A9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,14 +168,16 @@
 		8E2FB1122431A61C0094C04B /* ReportProject */ = {
 			isa = PBXGroup;
 			children = (
+				8E2A97982440608800E3EA06 /* Utils */,
 				8ED62CE724333B020089B279 /* Models */,
 				8ED62CDA2431D3110089B279 /* ViewControllers */,
 				8E313200243730BC00E76C0F /* Views */,
 				8E2FB1132431A61C0094C04B /* AppDelegate.h */,
 				8E2FB1142431A61C0094C04B /* AppDelegate.m */,
 				8E2FB1192431A61C0094C04B /* Main.storyboard */,
-				8E2FB11C2431A61D0094C04B /* Assets.xcassets */,
 				8E2FB11E2431A61D0094C04B /* LaunchScreen.storyboard */,
+				8E2A979B24406B4F00E3EA06 /* Supporting files */,
+				8E2A979724405FE900E3EA06 /* Resources */,
 				8E2FB1212431A61D0094C04B /* Info.plist */,
 				8E2FB1222431A61D0094C04B /* main.m */,
 			);
