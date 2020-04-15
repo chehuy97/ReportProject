@@ -32,7 +32,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ItemTreeViewCell *cell = (ItemTreeViewCell *) [ tableView dequeueReusableCellWithIdentifier:@"FolderItem"];
+    ItemTreeViewCell *cell = (ItemTreeViewCell *) [ tableView dequeueReusableCellWithIdentifier:@"FolderTreeItem"];
     cell.baseIconImage.image = [UIImage imageNamed:@"folder-icon"];
     cell.nameLabel.text = @"Folder";
     

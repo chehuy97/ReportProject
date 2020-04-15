@@ -28,6 +28,7 @@
     {
         [self addViewController:segue.destinationViewController];
     }
+    self.currentViewController = segue.destinationViewController;
 }
 
 -(void) addViewController: (UIViewController*) aViewController
@@ -52,7 +53,6 @@
         [toViewController didMoveToParentViewController:self];
     }];
 }
-
 
 - (void)showViewControllerWithSegue:(NSString *)segueIdentifier
 {

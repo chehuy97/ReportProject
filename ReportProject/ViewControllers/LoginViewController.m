@@ -132,12 +132,12 @@
     userInfo.username = _usernameTextfield.text;
     userInfo.password = _passwordTextfield.text;
 
-    if ([userInfo.username  isEqual: @"chehuy97"] && [userInfo.password  isEqual: @"123456"]) {
+    if ([userInfo.username  isEqualToString:@"chehuy97"] && [userInfo.password  isEqualToString: @"123456"]) {
         [self.mainViewController showSettingServiceView];
     }else if([userInfo.username  isEqual: @""] || [userInfo.password  isEqual: @""]){
-        [self showAlert:@"you haven't filled username or password"];
+        [[AppDelegate shareInstance] showWarningNotificationWithMessage:@"you haven't filled username or password"];
     }else{
-        [self showAlert:@"you filled wrong username or password"];
+        [[AppDelegate shareInstance] showWarningNotificationWithMessage:@"you filled wrong username or password"];
     }
 }
 
