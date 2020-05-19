@@ -19,5 +19,8 @@
 @property (nonatomic, weak) MainViewController *mainViewController;
 
 -(void) showAlert:(NSString *) content;
+//chequanghuy
+//arthurpendragon
+//onepiece
 
 @end
